@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">TestMvpFragmentsDaggerRetrofit</string>
+    <string name="tv_pass_title">Вы можете войти, используя\nлогин и пароль от Интернет-банкинга</string>
+    <string name="login_text">Логин</string>
+    <string name="hint_text_login">Введите логин</string>
+    <string name="info_for_pass">Используйте цифры и буквы латинского алфавита</string>
+    <string name="forgot_passorlog">Не помню логин или пароль</string>
+    <string name="resume">Продолжить</string>
 </resources>
