@@ -14,4 +14,16 @@
     <string name="id_tv_mobkey">Мобильный ключ*</string>
     <string name="id_et_mobkey">Введите мобильный ключ</string>
     <string name="id_btn_resume">Продолжить</string>
+
+    <string name="sms_tv_header">SMS-код</string>
+    <string name="sms_tv_body">Для подтверждения регистрации на номер +3752911ХХХ11 будет выслано сообщение. Продолжить?</string>
+    <string name="sms_btn_yes">Да, это мой номер</string>
+    <string name="sms_btn_no">Нет, у меня другой номер</string>
+
+    <string name="tel_tv_header">Номер телефона</string>
+    <string name="tel_tv_body">Введите номер телефона, чтобы отправить в Банк заявку на замену номера</string>
+    <string name="tel_et_num">Введите новый номер</string>
+    <string name="tel_btn_send">Отправить заявку</string>
+
+
 </resources>

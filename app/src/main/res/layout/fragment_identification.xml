@@ -2,17 +2,29 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:weightSum="17"
-    android:paddingTop="20dp"
-    android:background="#ffff">
+    android:background="@color/white">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_id"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        android:backgroundTint="@color/grad_batton_orange_start"
+        app:titleTextColor="@color/white"
+        app:title="Регистрация"/>
 
     <LinearLayout
         android:id="@+id/linear_ident_for_image"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="4"
-        android:gravity="center_horizontal">
+        android:gravity="center_horizontal"
+        android:layout_marginTop="20dp">
 
         <ImageView
             android:id="@+id/iv_id_main"
@@ -102,25 +114,26 @@
             android:layout_marginEnd="18dp"
             android:layout_alignTop="@id/editText_id_key"
             android:layout_alignBottom="@id/editText_id_key"
-            android:layout_toLeftOf="@id/iv_show_info"/>
+            android:layout_toStartOf="@id/iv_show_info"/>
 
 
 
         <Button
             android:id="@+id/button_pass"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="60dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
             android:text="@string/id_btn_resume"
             android:background="@drawable/button_orange_oval"
-            android:textColor="#FFFF"
+            android:textColor="@color/white"
             android:elevation="10dp"
             android:textStyle="bold"
             android:textAllCaps="false"
-            android:translationZ="15dp"
-            android:textIsSelectable="false"/>
+            android:translationZ="15dp"/>
 
     </RelativeLayout>
 

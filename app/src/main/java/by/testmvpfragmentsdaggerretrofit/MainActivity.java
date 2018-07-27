@@ -2,6 +2,7 @@ package by.testmvpfragmentsdaggerretrofit;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.text.method.PasswordTransformationMethod;
 import android.view.View;
 import android.widget.Button;
@@ -18,6 +19,8 @@ public class MainActivity extends AppCompatActivity {
     Button button;
     static int i = 1;
 
+    Toolbar toolbar;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +32,9 @@ public class MainActivity extends AppCompatActivity {
         imageView = findViewById(R.id.iv_show_pass);
 
         button = findViewById(R.id.button_pass);
+
+        toolbar = findViewById(R.id.toolbar_id);
+        setSupportActionBar(toolbar);
 
 //        button.setEnabled(false);
 //        button.setBackground(getDrawable(R.drawable.button_gray_oval));
