@@ -1,5 +1,7 @@
 package by.testmvpfragmentsdaggerretrofit;
 
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -8,59 +10,37 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+import by.testmvpfragmentsdaggerretrofit.Password.PasswordFragment;
 
-    boolean flagShowPass = false;
-    EditText eTMobKey, eTIdNum;
-    ImageView imageView;
+public class MainActivity extends AppCompatActivity implements MainContract.View.MainActivityView{
 
-    Button button;
-    static int i = 1;
-
-    Toolbar toolbar;
-
+    private MainContract.Presenter.MainActivityPresenter presenter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.fragment_identification);
+        setContentView(R.layout.activity_main);
 
+        presenter.onShowFragment();
 
-        eTMobKey = findViewById(R.id.editText_id_key);
-        imageView = findViewById(R.id.iv_show_pass);
-
-        button = findViewById(R.id.button_pass);
-
-        toolbar = findViewById(R.id.toolbar_id);
-        setSupportActionBar(toolbar);
-
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        PasswordFragment fragment = new PasswordFragment();
+        fragmentTransaction.replace(R.id.container, fragment, null);
+        fragmentTransaction.commit();
 //        button.setEnabled(false);
 //        button.setBackground(getDrawable(R.drawable.button_gray_oval));
 
 
-
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                someDo();
-            }
-        });
     }
 
-
-
-    public void someDo() {
-        if (!flagShowPass) {
-            imageView.setImageResource(R.drawable.ic_visibility_black_24dp);
-            eTMobKey.setTransformationMethod(null);
-            eTMobKey.setSelection(eTMobKey.length());
-            flagShowPass = !flagShowPass;
-        } else {
-            imageView.setImageResource(R.drawable.ic_visibility_off_black_24dp);
-            flagShowPass = !flagShowPass;
-            eTMobKey.setTransformationMethod(new PasswordTransformationMethod());
-        }
+    @Override
+    public void showFragment() {
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        PasswordFragment fragment = new PasswordFragment();
+        fragmentTransaction.replace(R.id.container, fragment, null);
+        fragmentTransaction.commit();
     }
 }
