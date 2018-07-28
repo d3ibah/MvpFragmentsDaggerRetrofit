@@ -22,9 +22,12 @@ public interface MainContract {
         }
 
         interface Dialog1Int {
+            void finishDialog();
+            void showDialog2();
         }
 
         interface Dialog2Int {
+            void closeDialog();
         }
     }
 
@@ -47,12 +50,12 @@ public interface MainContract {
         }
 
         interface Dialog1Pr {
+            void onButtonYesWasClicked();
+            void onButtoNoWasClicked();
         }
 
         interface Dialog2Pr {
             void onButtonWasClicked();
-
-            void onDestroy();
         }
     }
 

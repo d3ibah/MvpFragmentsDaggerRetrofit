@@ -16,7 +16,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 
-import by.testmvpfragmentsdaggerretrofit.Dialog1.Dialog1Fragment;
 import by.testmvpfragmentsdaggerretrofit.Identification.IdentificationFragment;
 import by.testmvpfragmentsdaggerretrofit.MainContract;
 import by.testmvpfragmentsdaggerretrofit.R;

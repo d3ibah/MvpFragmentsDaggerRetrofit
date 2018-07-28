@@ -27,11 +27,6 @@ public class MainActivity extends AppCompatActivity implements MainContract.View
 
         presenter.onShowFragment();
 
-/*        FragmentManager fragmentManager = getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        PasswordFragment fragment = new PasswordFragment();
-        fragmentTransaction.replace(R.id.container, fragment, null);
-        fragmentTransaction.commit();*/
 
 //        button.setEnabled(false);
 //        button.setBackground(getDrawable(R.drawable.button_gray_oval));
@@ -41,12 +36,6 @@ public class MainActivity extends AppCompatActivity implements MainContract.View
 
     @Override
     public void showFragment() {
-        /*FragmentManager fragmentManager = getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        IdentificationFragment fragment = new IdentificationFragment();
-        fragmentTransaction.replace(R.id.container, fragment, null);
-        fragmentTransaction.commit();*/
-
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         PasswordFragment fragment = new PasswordFragment();
