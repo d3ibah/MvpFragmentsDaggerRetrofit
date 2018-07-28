@@ -8,13 +8,15 @@ public interface MainContract {
             void showFragment();
         }
 
-        interface PasswordInt {
+        interface PasswordView {
+            void showOrHidePassword();
+            void showIdentificationFragment();
         }
 
         interface IdentificationView {
 
             void showInfo();
-            void showOrHidePassword();
+            void showOrHideKey();
             void goToWeatherActivity();
             void goBack();
         }
@@ -33,6 +35,8 @@ public interface MainContract {
         }
 
         interface PasswordPr {
+            void onButtonWasClicked();
+            void onImageVisibilityWasClicked();
         }
 
         interface IdentificationPr {

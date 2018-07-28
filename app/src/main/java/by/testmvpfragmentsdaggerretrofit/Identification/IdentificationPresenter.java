@@ -22,7 +22,7 @@ public class IdentificationPresenter implements MainContract.Presenter.Identific
 
     @Override
     public void onShowOrHideWasClicked() {
-        identificationView.showOrHidePassword();
+        identificationView.showOrHideKey();
     }
 
     @Override

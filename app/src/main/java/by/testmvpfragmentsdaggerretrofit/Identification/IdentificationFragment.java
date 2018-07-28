@@ -6,6 +6,7 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.method.PasswordTransformationMethod;
@@ -31,6 +32,7 @@ public class IdentificationFragment extends Fragment implements MainContract.Vie
 
     boolean flagShowPass = false;
 
+
     private MainContract.Presenter.IdentificationPr identificationPresenter;
 
 
@@ -49,9 +51,23 @@ public class IdentificationFragment extends Fragment implements MainContract.Vie
         ivVisibility = rootView.findViewById(R.id.iv_show_pass);
         btnResume = rootView.findViewById(R.id.btn_id_resume);
 
-        ((AppCompatActivity)getActivity()).setSupportActionBar(toolbar);
-        ((AppCompatActivity)getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        ((AppCompatActivity)getActivity()).getSupportActionBar().setDisplayShowHomeEnabled(true);
+        AppCompatActivity appCompatActivity = ((AppCompatActivity) getActivity());
+        appCompatActivity.setSupportActionBar(toolbar);
+
+        ActionBar actionBar = appCompatActivity.getSupportActionBar();
+        if (actionBar != null) {
+            appCompatActivity.getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            appCompatActivity.getSupportActionBar().setDisplayShowHomeEnabled(true);
+        }
+
+/*      Toolbar profile_toolbar = (Toolbar)view.findViewById(R.id.profile_toolbar);
+        AppCompatActivity activity = (AppCompatActivity)getActivity();
+        activity.setSupportActionBar(profile_toolbar);
+        ActionBar actionBar = activity.getSupportActionBar();
+        if(actionBar!= null) {
+            actionBar.setTitle("dgdfg");
+    }
+    }*/
 
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
@@ -88,7 +104,7 @@ public class IdentificationFragment extends Fragment implements MainContract.Vie
     }
 
     @Override
-    public void showOrHidePassword() {
+    public void showOrHideKey() {
         if (!flagShowPass) {
             ivVisibility.setImageResource(R.drawable.ic_visibility_black_24dp);
             etIdKey.setTransformationMethod(null);
