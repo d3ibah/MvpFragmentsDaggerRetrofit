@@ -8,10 +8,6 @@ import retrofit2.http.Query;
 
 public interface RestApi {
 
-
     @GET("data/2.5/weather")
     Observable<WeatherIdCity> getWeatherIdCity(@Query("id") String idCity, @Query("appid") String weatherApiKey, @Query("units") String units);
-
-    /*units=metric*/
-
 }
