@@ -1,5 +1,7 @@
 package by.testmvpfragmentsdaggerretrofit;
 
+import by.testmvpfragmentsdaggerretrofit.Models.Model;
+
 public class MainActivityPresenter implements MainContract.Presenter.MainActivityPresenter{
 
     private MainContract.View.MainActivityView mainActivityView;

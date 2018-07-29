@@ -24,14 +24,7 @@ public class MainActivity extends AppCompatActivity implements MainContract.View
         setContentView(R.layout.activity_main);
 
         presenter = new MainActivityPresenter(this);
-
         presenter.onShowFragment();
-
-
-//        button.setEnabled(false);
-//        button.setBackground(getDrawable(R.drawable.button_gray_oval));
-
-
     }
 
     @Override

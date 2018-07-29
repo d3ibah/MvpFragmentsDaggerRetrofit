@@ -10,6 +10,8 @@
     <string name="pass_tv_password">Пароль</string>
 
     <string name="id_et_idnum">Введите идентификационный номер</string>
+    <string name="id_et_idnum_info">Поле не должно быть пустым!</string>
+    <string name="id_tv_idnum_warning">Ошибка!</string>
     <string name="id_tv_idnum">Идентификационный номер</string>
     <string name="id_tv_mobkey">Мобильный ключ*</string>
     <string name="id_et_mobkey">Введите мобильный ключ</string>

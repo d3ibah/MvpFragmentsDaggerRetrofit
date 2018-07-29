@@ -90,6 +90,12 @@ public class IdentificationFragment extends Fragment implements MainContract.Vie
             }
         });
 
+        btnResume.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                identificationPresenter.onButtonWasClicked();
+            }
+        });
 
         return rootView;
     }
@@ -119,6 +125,14 @@ public class IdentificationFragment extends Fragment implements MainContract.Vie
 
     @Override
     public void goToWeatherActivity() {
+        btnResume.setEnabled(false);
+        btnResume.setBackground(getActivity().getDrawable(R.drawable.button_gray_oval));
+        tvIdNum.setText(getActivity().getText(R.string.id_tv_idnum_warning));
+        tvIdNum.setTextColor(getActivity().getResources().getColor(R.color.colorWarning));
+        ivWarning.setVisibility(View.VISIBLE);
+        etIdNum.setHint(getActivity().getText(R.string.id_et_idnum_info));
+        etIdNum.setFocusable(true);
+        etIdNum.setSelection(etIdNum.length());
 
     }
 

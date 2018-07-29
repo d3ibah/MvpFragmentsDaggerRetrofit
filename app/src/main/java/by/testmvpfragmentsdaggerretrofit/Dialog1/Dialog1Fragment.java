@@ -1,6 +1,7 @@
 package by.testmvpfragmentsdaggerretrofit.Dialog1;
 
 import android.app.Dialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -13,8 +14,10 @@ import android.view.View;
 import android.widget.Button;
 
 import by.testmvpfragmentsdaggerretrofit.Dialog2.Dialog2Fragment;
+import by.testmvpfragmentsdaggerretrofit.MainActivity;
 import by.testmvpfragmentsdaggerretrofit.MainContract;
 import by.testmvpfragmentsdaggerretrofit.R;
+import by.testmvpfragmentsdaggerretrofit.WeatherActivity;
 
 public class Dialog1Fragment extends DialogFragment implements MainContract.View.Dialog1Int{
 
@@ -53,7 +56,10 @@ public class Dialog1Fragment extends DialogFragment implements MainContract.View
 
     @Override
     public void finishDialog() {
-        onDestroyView();
+//        onDestroyView();
+
+        Intent intent = new Intent(getContext(), WeatherActivity.class);
+        startActivity(intent);
     }
 
     @Override

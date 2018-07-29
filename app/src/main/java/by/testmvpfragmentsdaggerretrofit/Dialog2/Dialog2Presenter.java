@@ -1,7 +1,7 @@
 package by.testmvpfragmentsdaggerretrofit.Dialog2;
 
 import by.testmvpfragmentsdaggerretrofit.MainContract;
-import by.testmvpfragmentsdaggerretrofit.Model;
+import by.testmvpfragmentsdaggerretrofit.Models.Model;
 
 public class Dialog2Presenter implements MainContract.Presenter.Dialog2Pr{
 

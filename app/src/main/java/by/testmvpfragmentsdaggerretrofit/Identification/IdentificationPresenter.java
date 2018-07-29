@@ -1,7 +1,7 @@
 package by.testmvpfragmentsdaggerretrofit.Identification;
 
 import by.testmvpfragmentsdaggerretrofit.MainContract;
-import by.testmvpfragmentsdaggerretrofit.Model;
+import by.testmvpfragmentsdaggerretrofit.Models.Model;
 
 public class IdentificationPresenter implements MainContract.Presenter.IdentificationPr{
 

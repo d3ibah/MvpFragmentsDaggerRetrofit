@@ -1,7 +1,7 @@
 package by.testmvpfragmentsdaggerretrofit.Password;
 
 import by.testmvpfragmentsdaggerretrofit.MainContract;
-import by.testmvpfragmentsdaggerretrofit.Model;
+import by.testmvpfragmentsdaggerretrofit.Models.Model;
 
 public class PasswordPresenter implements MainContract.Presenter.PasswordPr{
 
