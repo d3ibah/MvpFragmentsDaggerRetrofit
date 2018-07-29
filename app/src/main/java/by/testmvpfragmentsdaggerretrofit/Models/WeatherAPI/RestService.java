@@ -20,7 +20,7 @@ public class RestService {
 
 //    public static final String BASE_URL = "https://api.openweathermap.org/";
 //    private static RestService instance;
-    private RestApi restApi;
+    public RestApi restApi;
 
 
     @Inject

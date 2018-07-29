@@ -7,6 +7,7 @@ import android.widget.TextView;
 import javax.inject.Inject;
 
 import by.testmvpfragmentsdaggerretrofit.Models.DataModel.WeatherIdCity;
+import by.testmvpfragmentsdaggerretrofit.Models.WeatherAPI.RestApi;
 import by.testmvpfragmentsdaggerretrofit.Models.WeatherAPI.RestService;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
@@ -17,8 +18,11 @@ public class WeatherActivity extends AppCompatActivity {
 
     private Disposable disposable;
 
+//    @Inject
+//    RestService restService;
+
     @Inject
-    RestService restService;
+    RestApi restService;
 
     public final static String KEY = "caca802f25ade93761f49c8f818f1caf";
     public final static String UNITS = "metric";
@@ -40,7 +44,9 @@ public class WeatherActivity extends AppCompatActivity {
 
         App.getAppComponent().inject(this);
 
-        /*disposable = restService.getRestApi().getWeatherIdCity(ID_CITY, KEY, UNITS)
+
+
+        disposable = restService.getWeatherIdCity(ID_CITY, KEY, UNITS)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribeWith(new DisposableObserver<WeatherIdCity>() {
@@ -59,6 +65,6 @@ public class WeatherActivity extends AppCompatActivity {
                     public void onComplete() {
 
                     }
-                });*/
+                });
     }
 }

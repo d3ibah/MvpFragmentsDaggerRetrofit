@@ -21,10 +21,10 @@ public class App extends Application{
     }
 
     private AppComponent initInjector(){
-        return DaggerAppComponent.builder()
+        appComponent = DaggerAppComponent.builder()
                 .appModule(new AppModule())
                 .build();
 
-        //todo
+        return appComponent;
     }
 }
