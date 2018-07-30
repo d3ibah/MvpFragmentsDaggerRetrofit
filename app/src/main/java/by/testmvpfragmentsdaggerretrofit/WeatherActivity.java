@@ -1,7 +1,9 @@
 package by.testmvpfragmentsdaggerretrofit;
 
+import android.content.pm.ActivityInfo;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.TextView;
 
 import javax.inject.Inject;
@@ -16,10 +18,7 @@ import io.reactivex.schedulers.Schedulers;
 
 public class WeatherActivity extends AppCompatActivity {
 
-    private Disposable disposable;
-
-//    @Inject
-//    RestService restService;
+    Disposable disposable;
 
     @Inject
     RestApi restService;
@@ -28,23 +27,26 @@ public class WeatherActivity extends AppCompatActivity {
     public final static String UNITS = "metric";
     public final static String ID_CITY = "625144";
 
-
-    TextView textCity, textDegree;
+    private TextView textCity, textDegree;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        setRequestedOrientation (ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_weather);
 
         textCity = findViewById(R.id.textView);
         textDegree = findViewById(R.id.textView2);
+    }
 
-//        restService = RestService.getInstance();
+    @Override
+    protected void onStart() {
+        super.onStart();
 
         App.getAppComponent().inject(this);
-
-
 
         disposable = restService.getWeatherIdCity(ID_CITY, KEY, UNITS)
                 .subscribeOn(Schedulers.io())

@@ -13,7 +13,7 @@ public class MainActivityPresenter implements MainContract.Presenter.MainActivit
     }
 
     @Override
-    public void onShowFragment() {
-        mainActivityView.showFragment();
+    public void onShowFragment(boolean addToBackStack) {
+        mainActivityView.showFragment(addToBackStack);
     }
 }

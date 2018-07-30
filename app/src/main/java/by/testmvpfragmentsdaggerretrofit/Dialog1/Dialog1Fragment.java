@@ -14,7 +14,6 @@ import android.view.View;
 import android.widget.Button;
 
 import by.testmvpfragmentsdaggerretrofit.Dialog2.Dialog2Fragment;
-import by.testmvpfragmentsdaggerretrofit.MainActivity;
 import by.testmvpfragmentsdaggerretrofit.MainContract;
 import by.testmvpfragmentsdaggerretrofit.R;
 import by.testmvpfragmentsdaggerretrofit.WeatherActivity;
@@ -56,8 +55,6 @@ public class Dialog1Fragment extends DialogFragment implements MainContract.View
 
     @Override
     public void finishDialog() {
-//        onDestroyView();
-
         Intent intent = new Intent(getContext(), WeatherActivity.class);
         startActivity(intent);
     }

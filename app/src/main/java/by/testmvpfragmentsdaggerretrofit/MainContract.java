@@ -5,7 +5,7 @@ public interface MainContract {
     interface View {
 
         interface MainActivityView{
-            void showFragment();
+            void showFragment(boolean addToBackStack);
         }
 
         interface PasswordView {
@@ -34,7 +34,7 @@ public interface MainContract {
     interface Presenter {
 
         interface MainActivityPresenter{
-            void onShowFragment();
+            void onShowFragment(boolean addToBackStack);
         }
 
         interface PasswordPr {

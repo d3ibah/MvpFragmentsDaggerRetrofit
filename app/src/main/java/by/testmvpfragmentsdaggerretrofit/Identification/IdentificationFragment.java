@@ -60,15 +60,6 @@ public class IdentificationFragment extends Fragment implements MainContract.Vie
             appCompatActivity.getSupportActionBar().setDisplayShowHomeEnabled(true);
         }
 
-/*      Toolbar profile_toolbar = (Toolbar)view.findViewById(R.id.profile_toolbar);
-        AppCompatActivity activity = (AppCompatActivity)getActivity();
-        activity.setSupportActionBar(profile_toolbar);
-        ActionBar actionBar = activity.getSupportActionBar();
-        if(actionBar!= null) {
-            actionBar.setTitle("dgdfg");
-    }
-    }*/
-
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
