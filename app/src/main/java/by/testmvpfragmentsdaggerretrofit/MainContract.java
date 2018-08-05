@@ -1,11 +1,20 @@
 package by.testmvpfragmentsdaggerretrofit;
 
+import java.util.ArrayList;
+
+import by.testmvpfragmentsdaggerretrofit.Models.DataModel.WeatherIdCity;
+import io.reactivex.Observable;
+
 public interface MainContract {
 
     interface View {
 
         interface MainActivityView{
             void showFragment(boolean addToBackStack);
+        }
+
+        interface WeatherActivityView{
+            void showWeather(WeatherIdCity weatherIdCity);
         }
 
         interface PasswordView {
@@ -37,6 +46,10 @@ public interface MainContract {
             void onShowFragment(boolean addToBackStack);
         }
 
+        interface WeatherActivityPresenter{
+            void onStartedShowWeather();
+        }
+
         interface PasswordPr {
             void onButtonWasClicked();
             void onImageVisibilityWasClicked();
@@ -61,5 +74,6 @@ public interface MainContract {
 
     interface Model {
         String loadMessage();
+        Observable loadWeather();
     }
 }

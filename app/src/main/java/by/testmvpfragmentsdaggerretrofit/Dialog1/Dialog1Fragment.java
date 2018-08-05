@@ -16,7 +16,7 @@ import android.widget.Button;
 import by.testmvpfragmentsdaggerretrofit.Dialog2.Dialog2Fragment;
 import by.testmvpfragmentsdaggerretrofit.MainContract;
 import by.testmvpfragmentsdaggerretrofit.R;
-import by.testmvpfragmentsdaggerretrofit.WeatherActivity;
+import by.testmvpfragmentsdaggerretrofit.Weather.WeatherActivity;
 
 public class Dialog1Fragment extends DialogFragment implements MainContract.View.Dialog1Int{
 

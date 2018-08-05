@@ -1,17 +1,13 @@
 package by.testmvpfragmentsdaggerretrofit.Identification;
 
 import by.testmvpfragmentsdaggerretrofit.MainContract;
-import by.testmvpfragmentsdaggerretrofit.Models.Model;
 
 public class IdentificationPresenter implements MainContract.Presenter.IdentificationPr{
 
     private MainContract.View.IdentificationView identificationView;
-    private MainContract.Model model;
-    private String message;
 
     public IdentificationPresenter(MainContract.View.IdentificationView identificationView) {
         this.identificationView = identificationView;
-        this.model = new Model();
     }
 
 
